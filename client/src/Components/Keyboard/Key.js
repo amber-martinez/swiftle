@@ -1,10 +1,20 @@
 import React from 'react';
 
-function Key({ letter }) {
+function Key({ letter, setCurrCol, setCurrRow, currCol, currRow }) {
+    
+    function progressMatrix() {
+        if (currCol == 5) {
+            setCurrCol(1)
+            setCurrRow(currRow+1)
+        } else {
+            setCurrCol(currCol+1)
+        }
+    }
+
     return (
-        <span id='key'>
+        <button id='key' onClick={progressMatrix}>
             {letter}
-        </span>
+        </button>
     )
 }
 

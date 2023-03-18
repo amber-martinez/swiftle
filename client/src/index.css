@@ -13,3 +13,16 @@ body {
   margin: 3px;
 }
 
+#key {
+  background-color: #7f7f84;
+  border: none;
+  margin: 2.5px;
+  font-size: 22px;
+  padding: 0;
+  border-radius: 4px;
+  height: 60px;
+  width: 38px;
+  color: white;
+  cursor: pointer;
+}
+
