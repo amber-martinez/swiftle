@@ -26,3 +26,9 @@ body {
   cursor: pointer;
 }
 
+#key:hover {
+  /* background-color: #bdbdc4; */
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
