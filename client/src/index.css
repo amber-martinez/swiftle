@@ -1,0 +1,15 @@
+body {
+  background: #f0f0ee;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#box {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: 2px solid #cfcfcd;
+  display: inline-block;
+  margin: 3px;
+}
+
