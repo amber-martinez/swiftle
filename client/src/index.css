@@ -32,3 +32,16 @@ body {
   transition: 0.3s;
 }
 
+#row {
+  margin: -3px;
+  font-family: Sono;
+  font-size: 24px;
+  color: #69696b;
+}
+
+#letter {
+  margin-top: 7px;
+  margin-left: 12px;
+  position: absolute;
+}
+
