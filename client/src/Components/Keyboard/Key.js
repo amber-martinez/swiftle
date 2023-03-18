@@ -18,7 +18,7 @@ function Key({ letter, setCurrCol, setCurrRow, currCol, currRow, matrix, setMatr
     }
 
     return (
-        <button id='key' value={letter} onClick={handleNewLetter} style={{ fontFamily: "Sono" }}>
+        <button id='key' value={letter} onClick={handleNewLetter}>
             {letter}
         </button>
     )

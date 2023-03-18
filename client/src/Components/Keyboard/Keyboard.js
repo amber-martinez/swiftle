@@ -23,7 +23,9 @@ function Keyboard({ setCurrCol, setCurrRow, currCol, currRow, matrix, setMatrix 
         <div style={{ color: "#f0f0ee", marginTop: 39, textAlign: 'center' }}>
             {alphabet1}<br></br>
             {alphabet2}<br></br>
+            <button id="key" style={{ display: 'inline', width: 62, fontSize: 17 }}>enter</button>
             {alphabet3}
+            <button id="key" style={{ display: 'inline', width: 62, fontSize: 17 }}>⇦</button>
         </div>
     )
 }
