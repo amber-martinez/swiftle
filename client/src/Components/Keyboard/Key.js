@@ -1,19 +1,20 @@
 import React from 'react';
 
-function Key({ letter, setCurrCol, setCurrRow, setCurrStr, currCol, currRow, currStr }) {
+function Key({ letter, setCurrCol, setCurrRow, currCol, currRow, matrix, setMatrix }) {
     
     function handleNewLetter(e) {
         let letter = e.target.value
-        if (currCol == 5) {
-            setCurrCol(1)
+        if (currCol == 4) {
+            setCurrCol(0)
             setCurrRow(currRow+1)
-            setCurrStr([letter])
+
         } else {
-            let curr = [...currStr]
-            curr.push(letter)
             setCurrCol(currCol+1)
-            setCurrStr(curr)
         }
+
+        let matrixUpdate = [...matrix];
+        matrixUpdate[currRow][currCol] = letter;
+        setMatrix = matrixUpdate
     }
 
     return (
