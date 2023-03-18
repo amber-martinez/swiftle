@@ -7,15 +7,17 @@ function Key({ letter, setCurrCol, setCurrRow, setCurrStr, currCol, currRow, cur
         if (currCol == 5) {
             setCurrCol(1)
             setCurrRow(currRow+1)
-            setCurrStr(letter)
+            setCurrStr([letter])
         } else {
+            let curr = [...currStr]
+            curr.push(letter)
             setCurrCol(currCol+1)
-            setCurrStr(currStr+=letter)
+            setCurrStr(curr)
         }
     }
 
     return (
-        <button id='key' value={letter} onClick={handleNewLetter}>
+        <button id='key' value={letter} onClick={handleNewLetter} style={{ fontFamily: "Sono" }}>
             {letter}
         </button>
     )
