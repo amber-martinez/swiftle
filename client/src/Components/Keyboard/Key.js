@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 function Key({ letter, setCurrCol, currCol, currRow, matrix, setMatrix, rightPlace, rightLetter }) {
-    const [id, setID] = useState('key')
+    const [id, setID] = useState("key")
     
     function handleNewLetter(e) {
         let currLetter = e.target.value
@@ -29,7 +29,7 @@ function Key({ letter, setCurrCol, currCol, currRow, matrix, setMatrix, rightPla
     }, [currRow])
 
     return (
-        <button id={id} value={letter} onClick={handleNewLetter}>
+        <button class="key" id={id} value={letter} onClick={handleNewLetter}>
             {letter}
         </button>
     )

@@ -44,11 +44,11 @@ function Keyboard({ setCurrCol, setCurrRow, currCol, currRow, matrix, setMatrix,
         <div style={{ color: "#f0f0ee", marginTop: 39, textAlign: 'center' }}>
             {alphabets[0]}<br></br>
             {alphabets[1]}<br></br>
-            <button id="key" value="enter" onClick={handleEnter} style={{ display: 'inline', width: 62, fontSize: 17 }}>
+            <button class="key" value="enter" onClick={handleEnter} style={{ display: 'inline', width: 62, fontSize: 17 }}>
                 enter
             </button>
             {alphabets[2]}
-            <button id="key" value="back" onClick={handleDel} style={{ display: 'inline', width: 62, fontSize: 17 }}>
+            <button class="key" value="back" onClick={handleDel} style={{ display: 'inline', width: 62, fontSize: 17 }}>
                 ⇦
             </button>
         </div>

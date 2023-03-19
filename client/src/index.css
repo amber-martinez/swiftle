@@ -1,7 +1,7 @@
 body {
   background: #f0f0ee;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .box {
@@ -10,12 +10,12 @@ body {
   padding: 10px;
   border: 2px solid #cfcfcd;
   display: inline-block;
-  margin: 3px;
+  margin: 2px;
 }
 
 #rightPlaceBox {
   background-color: #bba4df;
-  border-color: #bba4df;
+  border-color: #bfa8e5;
   color: white;
 }
 
@@ -25,15 +25,15 @@ body {
   color: white;
 }
 
-#key {
+.key {
   background-color: #7f7f84;
   border: none;
   margin: 2.5px;
-  font-size: 20px;
+  font-size: 18px;
   padding: 0;
   border-radius: 4px;
-  height: 60px;
-  width: 38px;
+  height: 57px;
+  width: 34px;
   color: white;
   cursor: pointer;
   font-family: Sono;
@@ -41,44 +41,14 @@ body {
 
 #rightPlace {
   background-color: #bba4df;
-  border: none;
-  margin: 2.5px;
-  font-size: 20px;
-  padding: 0;
-  border-radius: 4px;
-  height: 60px;
-  width: 38px;
-  color: white;
-  cursor: pointer;
-  font-family: Sono;
 }
 
 #rightLetter {
   background-color: #5c1529;
-  border: none;
-  margin: 2.5px;
-  font-size: 20px;
-  padding: 0;
-  border-radius: 4px;
-  height: 60px;
-  width: 38px;
-  color: white;
-  cursor: pointer;
-  font-family: Sono;
 }
 
 #notALetter {
   background-color: #49494b;
-  border: none;
-  margin: 2.5px;
-  font-size: 20px;
-  padding: 0;
-  border-radius: 4px;
-  height: 60px;
-  width: 38px;
-  color: white;
-  cursor: pointer;
-  font-family: Sono;
 }
 
 #key:hover {
@@ -88,7 +58,7 @@ body {
 }
 
 #row {
-  margin: -3px;
+  margin: -6px;
   font-family: Sono;
   font-size: 24px;
   color: #69696b;
