@@ -27,6 +27,34 @@ body {
   font-family: Sono;
 }
 
+#rightPlace {
+  background-color: #bba4df;
+  border: none;
+  margin: 2.5px;
+  font-size: 20px;
+  padding: 0;
+  border-radius: 4px;
+  height: 60px;
+  width: 38px;
+  color: white;
+  cursor: pointer;
+  font-family: Sono;
+}
+
+#rightLetter {
+  background-color: #5c1529;
+  border: none;
+  margin: 2.5px;
+  font-size: 20px;
+  padding: 0;
+  border-radius: 4px;
+  height: 60px;
+  width: 38px;
+  color: white;
+  cursor: pointer;
+  font-family: Sono;
+}
+
 #key:hover {
   /* background-color: #bdbdc4; */
   opacity: 0.6;

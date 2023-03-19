@@ -1,16 +1,13 @@
 import React from 'react';
 
-function Key({ letter, setCurrCol, setCurrRow, currCol, currRow, matrix, setMatrix }) {
+function Key({ letter, setCurrCol, setCurrRow, currCol, currRow, matrix, setMatrix, rightPlace, rightLetter }) {
+    let id = 'key'
     
     function handleNewLetter(e) {
         let currLetter = e.target.value
         let col;
-        console.log(currCol)
 
-        if (currCol == 4) {
-            // setCurrCol(0)
-            // setCurrRow(currRow+1)
-        } else {
+        if (currCol < 4) {
             col = currCol+1
             setCurrCol(col)
         }
@@ -18,11 +15,19 @@ function Key({ letter, setCurrCol, setCurrRow, currCol, currRow, matrix, setMatr
         let matrixUpdate = [...matrix];
         matrixUpdate[currRow][col] = currLetter;
         setMatrix = matrixUpdate
-        console.log(matrix)
     }
 
+    if (rightPlace.includes(letter)) {
+        id = 'rightPlace'
+    }
+    if (rightLetter.includes(letter)) {
+        id = 'rightLetter'
+    }
+
+    // console.log(rightLetter, rightPlace)
+
     return (
-        <button id='key' value={letter} onClick={handleNewLetter}>
+        <button id={id} value={letter} onClick={handleNewLetter}>
             {letter}
         </button>
     )
