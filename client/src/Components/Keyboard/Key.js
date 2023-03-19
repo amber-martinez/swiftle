@@ -19,12 +19,17 @@ function Key({ letter, setCurrCol, currCol, currRow, matrix, setMatrix, rightPla
 
     // highlight keys on keyboard based on letters guessed
     useEffect(() => {
-        if (rightPlace.includes(letter)) {
-            setID("rightPlace");
-        } else if (rightLetter.includes(letter)) {
-            setID("rightLetter");
-        } else if (matrix[0].includes(letter) || matrix[1].includes(letter) || matrix[2].includes(letter) || matrix[3].includes(letter) || matrix[4].includes(letter) || matrix[5].includes(letter)) {
-            setID("notALetter");
+        if (currRow > 0) {
+            if (rightPlace[currRow-1].includes(letter)) {
+                setID("rightPlace");
+            } else if (rightLetter[currRow-1].includes(letter)) {
+                setID("rightLetter");
+            } else if (matrix[0].includes(letter) || matrix[1].includes(letter) || matrix[2].includes(letter) || matrix[3].includes(letter) || matrix[4].includes(letter) || matrix[5].includes(letter)) {
+                let check = [rightPlace.join('').split(''), rightLetter.join('').split('')].join('').split('')
+                if (!check.includes(letter)) {
+                    setID("notALetter");
+                }
+            }
         }
     }, [currRow])
 

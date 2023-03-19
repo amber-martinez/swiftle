@@ -8,7 +8,7 @@ function Keyboard({ setCurrCol, setCurrRow, currCol, currRow, matrix, setMatrix,
     let alphabet2 = ["a","s","d","f","g","h","j","k","l"]
     let alphabet3 = ["z","x","c","v","b","n","m"]
     let alphabets = [alphabet1, alphabet2, alphabet3]
-    // create keys for each letter in alphabet
+    // create key components for each letter in alphabet
     for (let i = 0; i < alphabets.length; i++) {
         alphabets[i] = alphabets[i].map(letter => (
             <Key letter={letter} setCurrCol={setCurrCol} setCurrRow={setCurrRow} currCol={currCol} currRow={currRow} setMatrix={setMatrix} matrix={matrix} rightPlace={rightPlace} rightLetter={rightLetter}/>
