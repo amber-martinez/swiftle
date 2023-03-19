@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Key from './Key'
 // import enter from './EnterFunc'
 
-function Keyboard({ setCurrCol, setCurrRow, currCol, currRow, matrix, setMatrix, word, rightPlace, setRightPlace, rightLetter, setRightLetter }) {
+function Keyboard({ setCurrCol, setCurrRow, currCol, currRow, matrix, setMatrix, word, rightPlace, rightLetter }) {
 
     let alphabet1 = ["q","w","e","r","t","y","u","i","o","p"]
     let alphabet2 = ["a","s","d","f","g","h","j","k","l"]
@@ -29,6 +29,7 @@ function Keyboard({ setCurrCol, setCurrRow, currCol, currRow, matrix, setMatrix,
                 }
             }
             setCurrRow(currRow+1)
+            setCurrCol(-1)
             
         } else if (e.target.value == "back") {
             matrixUpdate[currRow].pop();

@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Header/>
       <RowGroup matrix={matrix}/>
-      <Keyboard setCurrCol={setCurrCol} setCurrRow={setCurrRow} currCol={currCol} currRow={currRow} setMatrix={setMatrix} matrix={matrix} word={word} rightPlace={rightPlace} rightLetter={rightLetter} setRightPlace={setRightPlace} setRightLetter={setRightLetter}/>
+      <Keyboard setCurrCol={setCurrCol} setCurrRow={setCurrRow} currCol={currCol} currRow={currRow} setMatrix={setMatrix} matrix={matrix} word={word} rightPlace={rightPlace} rightLetter={rightLetter}/>
     </div>
   );
 }

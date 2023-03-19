@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-function Key({ letter, setCurrCol, setCurrRow, currCol, currRow, matrix, setMatrix, rightPlace, rightLetter }) {
-    let id = 'key'
+function Key({ letter, setCurrCol, currCol, currRow, matrix, setMatrix, rightPlace, rightLetter }) {
+    const [id, setID] = useState('key')
     
     function handleNewLetter(e) {
         let currLetter = e.target.value
@@ -17,14 +17,15 @@ function Key({ letter, setCurrCol, setCurrRow, currCol, currRow, matrix, setMatr
         setMatrix = matrixUpdate
     }
 
-    if (rightPlace.includes(letter)) {
-        id = 'rightPlace'
-    }
-    if (rightLetter.includes(letter)) {
-        id = 'rightLetter'
-    }
-
-    // console.log(rightLetter, rightPlace)
+    useEffect(() => {
+        if (rightPlace.includes(letter)) {
+            setID("rightPlace");
+        } else if (rightLetter.includes(letter)) {
+            setID("rightLetter");
+        } else if (matrix[0].includes(letter) || matrix[1].includes(letter) || matrix[2].includes(letter) || matrix[3].includes(letter) || matrix[4].includes(letter) || matrix[5].includes(letter)) {
+            setID("notALetter");
+        }
+    }, [currRow])
 
     return (
         <button id={id} value={letter} onClick={handleNewLetter}>
