@@ -9,8 +9,8 @@ function App() {
   const [currCol, setCurrCol] = useState(-1);
   const [currRow, setCurrRow] = useState(0);
   const [matrix, setMatrix] = useState([[], [], [], [], [], []])
-  const [rightPlace, setRightPlace] = useState([]);
-  const [rightLetter, setRightLetter] = useState([]);
+  const [rightPlace, setRightPlace] = useState([[], [], [], [], [], []]);
+  const [rightLetter, setRightLetter] = useState([[], [], [], [], [], []]);
 
   return (
     <div className="App">

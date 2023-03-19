@@ -26,13 +26,12 @@ function Keyboard({ setCurrCol, setCurrRow, currCol, currRow, matrix, setMatrix,
         let matrixUpdate = [...matrix];
         let row = matrix[currRow];
 
+        // highlight for correctly guessed letters
         for (let i = 0; i < row.length; i++) {
             if (word[i] == row[i]) {
-                // highlight lavendar for correctly guessed letters in the right place
-                rightPlace.push(row[i])
+                rightPlace[currRow][i] = row[i]
             } else if (word.includes(row[i]) && !rightPlace.includes(row[i])) {
-                // highlight maroon for correctly guessed letters, but not in the right place
-                rightLetter.push(row[i])
+                rightLetter[currRow].push(row[i])
             }
         }
         setCurrRow(currRow+1)
