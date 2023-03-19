@@ -19,13 +19,24 @@ function Keyboard({ setCurrCol, setCurrRow, currCol, currRow, matrix, setMatrix 
         <Key letter={letter} setCurrCol={setCurrCol} setCurrRow={setCurrRow} currCol={currCol} currRow={currRow} setMatrix={setMatrix} matrix={matrix}/>
     ))
 
+    function handleEnterDel(e) {
+        if (e.target.value == "enter") {
+            
+        } else if (e.target.value == "back") {
+            let matrixUpdate = [...matrix];
+            matrixUpdate[currRow].pop();
+            setMatrix(matrixUpdate)
+            setCurrCol(currCol-1)
+        }
+    }
+
     return (
         <div style={{ color: "#f0f0ee", marginTop: 39, textAlign: 'center' }}>
             {alphabet1}<br></br>
             {alphabet2}<br></br>
-            <button id="key" style={{ display: 'inline', width: 62, fontSize: 17 }}>enter</button>
+            <button id="key" value="enter" onClick={handleEnterDel} style={{ display: 'inline', width: 62, fontSize: 17 }}>enter</button>
             {alphabet3}
-            <button id="key" style={{ display: 'inline', width: 62, fontSize: 17 }}>⇦</button>
+            <button id="key" value="back" onClick={handleEnterDel} style={{ display: 'inline', width: 62, fontSize: 17 }}>⇦</button>
         </div>
     )
 }
