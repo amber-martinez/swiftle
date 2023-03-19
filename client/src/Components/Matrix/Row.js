@@ -1,23 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Box from './Box';
 
-function Row({ row }) {
+function Row({ matrix, row, currRow, rightPlace, rightLetter }) {
+
     return (
         <div id="row">
-            <div id='box'>
-                <p id="letter">{row[0]}</p>
-            </div>
-            <div id='box'>
-                <p id="letter">{row[1]}</p>
-            </div>
-            <div id='box'>
-                <p id="letter">{row[2]}</p>
-            </div>
-            <div id='box'>
-                <p id="letter">{row[3]}</p>
-            </div>
-            <div id='box'>
-                <p id="letter">{row[4]}</p>
-            </div>
+            <Box letter={row[0]} currRow={currRow} rightPlace={rightPlace} rightLetter={rightLetter} matrix={matrix}/>
+            <Box letter={row[1]} currRow={currRow} rightPlace={rightPlace} rightLetter={rightLetter} matrix={matrix}/>
+            <Box letter={row[2]} currRow={currRow} rightPlace={rightPlace} rightLetter={rightLetter} matrix={matrix}/>
+            <Box letter={row[3]} currRow={currRow} rightPlace={rightPlace} rightLetter={rightLetter} matrix={matrix}/>
+            <Box letter={row[4]} currRow={currRow} rightPlace={rightPlace} rightLetter={rightLetter} matrix={matrix}/>
         </div>
     )
 }

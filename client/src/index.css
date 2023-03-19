@@ -4,13 +4,25 @@ body {
   margin-top: 50px;
 }
 
-#box {
+.box {
   width: 40px;
   height: 40px;
   padding: 10px;
   border: 2px solid #cfcfcd;
   display: inline-block;
   margin: 3px;
+}
+
+#rightPlaceBox {
+  background-color: #bba4df;
+  border-color: #bba4df;
+  color: white;
+}
+
+#rightLetterBox {
+  background-color: #5c1529;
+  border-color: #65182e;
+  color: white;
 }
 
 #key {

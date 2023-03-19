@@ -17,6 +17,7 @@ function Key({ letter, setCurrCol, currCol, currRow, matrix, setMatrix, rightPla
         setMatrix = matrixUpdate
     }
 
+    // highlight keys on keyboard based on letters guessed
     useEffect(() => {
         if (rightPlace.includes(letter)) {
             setID("rightPlace");
