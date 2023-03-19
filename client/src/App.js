@@ -4,6 +4,7 @@ import RowGroup from "./Components/Matrix/RowGroup";
 import Keyboard from "./Components/Keyboard/Keyboard";
 
 function App() {
+  
   // let's do a matrix filled with stacks. can only remove from top
   const [word, setWord] = useState("swift")
   const [currCol, setCurrCol] = useState(-1);
