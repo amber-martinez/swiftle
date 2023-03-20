@@ -41,9 +41,7 @@ function Keyboard({ setCurrCol, setCurrRow, currCol, currRow, matrix, setMatrix,
         setCurrRow(currRow+1)
         setCurrCol(-1)
         setMatrix(matrixUpdate)
-        if (wordCount == 5) {
-            setIsExploding(true)
-        }
+        if (wordCount == 5) setIsExploding(true)
     }
 
     return (
