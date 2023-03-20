@@ -1,7 +1,7 @@
 # Swiftle
 Swiftle is a word game inspired by The New York Times’ game Wordle with a twist: guess words associated with Taylor Swift. Current features include:
 - 6 chances to guess the word using displayed keyboard
-- Letters are highlighted on the keyboard and matrix by correct place and correct letter, but not the correct place
+- Letters are highlighted on the keyboard and matrix by correct place, and correct letter but not the correct place
 - Confetti bursts when correct word is guessed
 - Refresh for a new word to guess.
 
