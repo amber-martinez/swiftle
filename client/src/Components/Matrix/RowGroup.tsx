@@ -1,7 +1,7 @@
 import React from 'react';
 import Row from './Row';
 
-function RowGroup({ matrix, currRow, rightPlace, rightLetter }) {
+function RowGroup({ matrix, currRow, rightPlace, rightLetter }: { matrix: string[][], currRow: number, rightPlace: string[][], rightLetter: string[][]}) {
     
     return (
         <div>
