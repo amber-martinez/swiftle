@@ -1,20 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Header from "./Components/Header";
 import RowGroup from "./Components/Matrix/RowGroup";
 import Keyboard from "./Components/Keyboard/Keyboard";
 import words from "./Components/Words";
 
 function App() {
-  
+
+  let randomNum: number = Math.floor(Math.random() * 55) + 1
+
   // let's do a matrix filled with stacks. can only remove from top
-  const [word, setWord] = useState(words[Math.floor(Math.random() * 55) + 1])
-  const [currCol, setCurrCol] = useState(-1);
-  const [currRow, setCurrRow] = useState(0);
+  // eslint-disable-next-line no-unused-vars
+  const [word, setWord] = useState<string>(words[randomNum]);
+  const [currCol, setCurrCol] = useState<number>(-1);
+  const [currRow, setCurrRow] = useState<number>(0);
   const [matrix, setMatrix] = useState([[], [], [], [], [], []])
   const [rightPlace, setRightPlace] = useState([[], [], [], [], [], []]);
   const [rightLetter, setRightLetter] = useState([[], [], [], [], [], []]);
-
-  console.log(word)
 
   return (
     <div className="App">

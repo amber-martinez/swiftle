@@ -1,4 +1,6 @@
-let words = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var words = {
     1: 'swift',
     2: "lover",
     3: "remix",
@@ -54,6 +56,5 @@ let words = {
     53: "blake",
     54: "shiny",
     55: "style"
-}
-
-export default words;
+};
+exports.default = words;
