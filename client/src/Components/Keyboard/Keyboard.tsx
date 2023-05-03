@@ -4,13 +4,13 @@ import ConfettiExplosion from 'react-confetti-explosion';
 
 function Keyboard({ setCurrCol, setCurrRow, currCol, currRow, matrix, setMatrix, word, rightPlace, rightLetter }: { setCurrCol: Function, setCurrRow: Function, currCol: number, currRow: number, matrix: string[][], setMatrix: Function, word: string, rightPlace: string[][], rightLetter: string[][] }) {
     const [isExploding, setIsExploding] = useState(false);
-    // type Alphabet = string[]
 
-    const alphabet1: string[] = ["q","w","e","r","t","y","u","i","o","p"];
-    const alphabet2: string[] = ["a","s","d","f","g","h","j","k","l"];
-    const alphabet3: string[] = ["z","x","c","v","b","n","m"];
-    const alphabets: string[][] = [alphabet1, alphabet2, alphabet3];
-    let alphabetRender: any;
+    const alphabets: string[][] = [
+        ["q","w","e","r","t","y","u","i","o","p"],
+        ["a","s","d","f","g","h","j","k","l"],
+        ["z","x","c","v","b","n","m"]
+    ];
+    let alphabetRender: React.ReactElement<typeof Key>[][] = [];
 
     // create key components for each letter in alphabet
     for (let i = 0; i < alphabets.length; i++) {
@@ -54,12 +54,12 @@ function Keyboard({ setCurrCol, setCurrRow, currCol, currRow, matrix, setMatrix,
             <div id="confetti" style={{ marginLeft: "50%", marginTop: "-50%", position: "absolute" }}>
                 {isExploding && <ConfettiExplosion width={width} height="150vh"/>}
             </div>
-            {alphabets[0]}<br></br>
-            {alphabets[1]}<br></br>
+            {alphabetRender[0]}<br></br>
+            {alphabetRender[1]}<br></br>
             <button className="key" value="enter" onClick={handleEnter} style={{ display: 'inline', width: 62, fontSize: 17 }}>
                 enter
             </button>
-            {alphabets[2]}
+            {alphabetRender[2]}
             <button className="key" value="back" onClick={handleDel} style={{ display: 'inline', width: 62, fontSize: 17 }}>
                 ⇦
             </button>
