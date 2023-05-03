@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 function Key({ letter, setCurrCol, currCol, currRow, matrix, setMatrix, rightPlace, rightLetter }: { letter: string, setCurrCol: Function, currCol: number, currRow: number, matrix: string[][], setMatrix: Function, rightPlace: string[][], rightLetter: string[][] }) {
     const [id, setID] = useState("key")
     
-    function handleNewLetter(e: Event): void {
+    function handleNewLetter(e: React.MouseEvent): void {
         let currLetter: string = (e.target as HTMLInputElement).value;
         let col: number = currCol;
 
@@ -35,7 +35,7 @@ function Key({ letter, setCurrCol, currCol, currRow, matrix, setMatrix, rightPla
     }, [currRow])
 
     return (
-        <button className="key" id={id} value={letter} onClick={() => handleNewLetter}>
+        <button className="key" id={id} value={letter} onClick={handleNewLetter}>
             {letter}
         </button>
     )
