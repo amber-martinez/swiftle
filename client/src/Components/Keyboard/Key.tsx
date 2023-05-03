@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from 'react';
 
-function Key({ letter, setCurrCol, currCol, currRow, matrix, setMatrix, rightPlace, rightLetter }) {
+function Key({ letter, setCurrCol, currCol, currRow, matrix, setMatrix, rightPlace, rightLetter }: { letter: string, setCurrCol: Function, currCol: number, currRow: number, matrix: string[][], setMatrix: Function, rightPlace: string[][], rightLetter: string[][] }) {
     const [id, setID] = useState("key")
     
-    function handleNewLetter(e) {
-        let currLetter = e.target.value
-        let col;
+    function handleNewLetter(e: Event): void {
+        let currLetter: string = (e.target as HTMLInputElement).value;
+        let col: number = currCol;
 
         if (currCol < 4) {
             col = currCol+1
             setCurrCol(col)
         }
 
-        let matrixUpdate = [...matrix];
+        let matrixUpdate: string[][] = [...matrix];
         matrixUpdate[currRow][col] = currLetter;
-        setMatrix = matrixUpdate
+        setMatrix(matrixUpdate);
+        // setMatrix = matrixUpdate
     }
 
     // highlight keys on keyboard based on letters guessed
@@ -34,7 +35,7 @@ function Key({ letter, setCurrCol, currCol, currRow, matrix, setMatrix, rightPla
     }, [currRow])
 
     return (
-        <button class="key" id={id} value={letter} onClick={handleNewLetter}>
+        <button className="key" id={id} value={letter} onClick={() => handleNewLetter}>
             {letter}
         </button>
     )

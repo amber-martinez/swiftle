@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from './Box';
 
-function Row({ matrix, row, currRow, rightPlace, rightLetter }) {
+function Row({ matrix, row, currRow, rightPlace, rightLetter }: { matrix: string[][], row: number, currRow: number, rightPlace: string[][], rightLetter: string[][] }) {
 
     return (
         <div id="row">
